@@ -10,13 +10,50 @@ public class BankTest{
         // GIVEN
         BankAccount bankAccount = new BankAccount("Sabah", "Yusuf", LocalDate.of(1999, 9, 21), "252353466");
 
-        // WHEN AND THEN
+    
+    @Test
+    public void hasFirstName(){
         assertThat(bankAccount.getFirstName()).isEqualTo("Sabah");
-        assertThat(bankAccount.getLastName()).isEqualTo("Yusuf");
-        assertThat(bankAccount.getDateOfBirth()).isEqualTo(LocalDate.of(1999, 9, 21));
-        assertThat(bankAccount.getAccountNumber()).isEqualTo("252353466");
-    }
+        }
 
+    @Test
+    public void canSetFirstName(){
+        bankAccount.setFirstName("Sabah");
+        assertThat(bankAccount.getFirstName()).isEqualTo("Sabah");
+        }
+
+    @Test
+    public void hasLastName(){
+        assertThat(bankAccount.getLastName()).isEqualTo("Yusuf");
+        }
+
+     @Test
+    public void canSetLastName(){
+        bankAccount.setLastName("Yusuf");
+        assertThat(bankAccount.getLastName()).isEqualTo("Yusuf");}
+
+    @Test
+    public void hasDateOfBirthName(){
+        assertThat(bankAccount.getDateOfBirth()).isEqualTo(LocalDate.of(1999, 9, 21);
+        }
+
+    @Test
+    public void canSetDateOfBirth(){
+        bankAccount.setDateOfBirth("21-9-1999");
+        assertThat(bankAccount.getDateOfBirth()).isEqualTo(1999, 9, 21);
+        }
+
+    @Test
+    public void hasAccountNumber(){
+        assertThat(bankAccount.getAccountNumber()).isEqualTo("252353466");
+        }
+
+    @Test
+    public void canSetAccountNumber(){
+        bankAccount.setAccountNumber());
+        assertThat(bankAccount.getAccountNumber()).isEqualTo("252353466");
+        }
+ 
 
     @Test
     public void shouldDepositCorrectly(){
